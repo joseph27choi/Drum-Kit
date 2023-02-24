@@ -9,6 +9,7 @@ for (var i = 0, arrLen = buttons.length; i < arrLen; i++)
     buttons[i].addEventListener("click", function() 
     {
         makeSound(this.classList[0]);
+
         buttonAnimation(this.classList[0]);
     });
 }
@@ -19,8 +20,9 @@ for (var i = 0, arrLen = buttons.length; i < arrLen; i++)
 // add it to document so that whenever you press, it alerts
 document.addEventListener("keydown", function(event) 
 {
+
     makeSound(event['key']);
-    buttonAnimation(event.key);
+
 });
 
 
@@ -71,13 +73,5 @@ function buttonAnimation(currentKey)
 {
     // taking the class
     var activeButton = document.querySelector('.' + currentKey);
-    activeButton.classList.add('pressed');
-
-
-    // setTimeOut makes the animation return to normal
-    // setTimeOut(function(anonymous?), timeItTakesToReturn)
-    setTimeout(function(){
-        // remove .pressed from the classList after 100 milliseconds
-        activeButton.classList.remove('pressed');
-    }, 100);
+    activeButton.classList.add('.pressed');
 }
