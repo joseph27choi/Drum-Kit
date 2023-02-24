@@ -1,0 +1,60 @@
+// proper way? have to remember parenthesis rule
+
+// document.querySelectorAll("button").addEventListener("click", handleClick);
+
+// function handleClick() 
+// {
+//     alert("I got clicked!");
+// }
+
+
+// anonymous way 
+
+// document.querySelectorAll("button").addEventListener("click", function () 
+// {
+//     console.log("cs50 method");
+// });
+
+
+//use loops
+
+var buttons = document.querySelectorAll(".drum");
+
+for (var i = 0, arrLen = buttons.length; i < arrLen; i++) 
+{
+    buttons[i].addEventListener("click", function() 
+    {
+        switch(this.classList[0])
+        {
+            case 'w':
+                console.log('it\'s w');
+                break;
+            case 'a':
+                console.log('it\'s w');
+                break;
+            case 's':
+                console.log('it\'s w');
+                break;
+            case 'd':
+                console.log('it\'s w');
+                break;
+            case 'j':
+                console.log('it\'s w');
+                break;
+            case 'k':
+                console.log('it\'s w');
+                break;
+            case 'l':
+                console.log('it\'s w');
+                break;
+            
+        }
+    }); 
+}
+
+
+
+// var soundNames = ["crash", "kick-bass", "snare", "tom-1", "tom-2", "tom-3", "tom-4"];
+
+// // var audio = new Audio('sounds/' + soundNames[i] + '.mp3');
+// // audio.play();
